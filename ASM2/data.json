@@ -1,0 +1,5 @@
+{
+  "DeviceName": "my-mqtt-client",
+  "temperature": 34,
+  "humidity": 85
+}
