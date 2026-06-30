@@ -1,0 +1,47 @@
+@WebAPIDemo_HostAddress = http://localhost:5050
+
+### Get app version
+GET {{WebAPIDemo_HostAddress}}/api/AppVersion
+Accept: application/json
+
+### Post app version from device
+POST {{WebAPIDemo_HostAddress}}/api/PostVersion
+Content-Type: application/json
+
+{
+  "deviceId": "DEVICE_001",
+  "version": 1
+}
+
+### Get all sensor data
+GET {{WebAPIDemo_HostAddress}}/api/SensorDatas
+Accept: application/json
+
+### Add sensor data
+POST {{WebAPIDemo_HostAddress}}/api/SensorDatas
+Content-Type: application/json
+
+{
+  "deviceId": "DEVICE_001",
+  "temperature": 30.5,
+  "humidity": 70.2,
+  "createdAt": "2026-05-09T10:00:00"
+}
+
+### Get sensor data by id
+GET {{WebAPIDemo_HostAddress}}/api/SensorDatas/665f3f7a9b7c1e2a12345678
+Accept: application/json
+
+### Update sensor data
+PUT {{WebAPIDemo_HostAddress}}/api/SensorDatas/665f3f7a9b7c1e2a12345678
+Content-Type: application/json
+
+{
+  "deviceId": "DEVICE_001",
+  "temperature": 31.0,
+  "humidity": 65.0,
+  "createdAt": "2026-05-09T10:00:00"
+}
+
+### Delete sensor data
+DELETE {{WebAPIDemo_HostAddress}}/api/SensorDatas/665f3f7a9b7c1e2a12345678
